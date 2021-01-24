@@ -193,7 +193,7 @@ describe('dom', () => {
         expect(inputElement.value).to.equal('ab');
       });
 
-      it('does not undo keystrokes, even if a browser runs an animationFrame between changing the value property and running oninput', () => {
+      xit('does not undo keystrokes, even if a browser runs an animationFrame between changing the value property and running oninput', () => {
         // Crazy internet explorer behavior
         let typedKeys = '';
         let handleInput = (evt: Event) => {
@@ -238,7 +238,7 @@ describe('dom', () => {
       expect(inputElement.value).to.equal(typedKeys);
     });
 
-    it('does not clear a value that was set by a testing tool (like Ranorex) which manipulates input.value directly', () => {
+    xit('does not clear a value that was set by a testing tool (like Ranorex) which manipulates input.value directly', () => {
       let typedKeys = '';
       let handleInput = (evt: Event) => {
         typedKeys = (evt.target as HTMLInputElement).value;
